@@ -398,20 +398,7 @@ h2 {
        margin: 1 auto;
     }
 }
-#cty {
-    float: left;
-    width: 600px;
-    height: 550px;
-    padding: 10px;
-}
-#workcont {
-    justify-content: center;
-    text-align: justify;
-    vertical-align: middle;
-    padding: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-}
+
 .WORKPLACE {
     padding: 20px;
     margin-bottom: 50px;
@@ -428,15 +415,15 @@ h2 {
     text-align: center;
 }
 .wf-img{
-
+    
     display: flex;
     padding: 10px;
-    width: 100%; /* Ảnh sẽ tự động điều chỉnh kích thước theo .WORKPLACE /
+    width: 100%; /* Ảnh sẽ tự động điều chỉnh kích thước theo .WORKPLACE */
 }
 
 .wf-img img {
-    width: 100%; / Ảnh sẽ tự động điều chỉnh kích thước theo .wf-img /
-    height: auto; / Đảm bảo tỷ lệ khung hình của ảnh /
+    width: 100%; /* Ảnh sẽ tự động điều chỉnh kích thước theo .wf-img */
+    height: auto; /* Đảm bảo tỷ lệ khung hình của ảnh */
     align-items: center;
 }
 
@@ -447,22 +434,22 @@ h2 {
     padding: 10px;
     margin-right: 20px;
     margin-left: 20px;
-    flex-wrap: wrap; / Nội dung sẽ tự động chuyển sang chế độ wrap khi cần /
+    flex-wrap: wrap; /* Nội dung sẽ tự động chuyển sang chế độ wrap khi cần */
 }
 
-/ Khi cửa sổ có chiều rộng lớn hơn 768px /
+/* Khi cửa sổ có chiều rộng lớn hơn 768px */
 @media (min-width: 768px) {
     .WORKPLACE {
-        flex-direction: row; / #cty và .workcont sẽ nằm ngang */
+        flex-direction: row; /* #cty và .workcont sẽ nằm ngang */
         padding: 5px;
         margin: 5px;
-
+   
     }
 
     #cty {
         width:50%
     }
-    
+}
 
 .workcont1 {
     color: gray;
@@ -474,6 +461,8 @@ h2 {
     padding: 10px;
     margin: 10px;
 }
+
+
 .WELFARE  {
     padding:10px;
     margin: 10px;
