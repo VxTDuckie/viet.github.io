@@ -478,11 +478,11 @@ h2 {
     padding: 5px;
     margin-bottom: 10px;
     margin-top: 10px;
-    width: calc(60% - 5px); /* Trừ 5px để tính toán padding */
+    width: 60%;
     border: none;
 }
 
-#jobbutton {
+ /* #jobbutton {
     background-color: white;
     color: gray;
     text-align: center;
@@ -490,14 +490,18 @@ h2 {
     border: none;
     border-radius: 5px 20px 20px 5px;
     width: calc(20% - 150px); /* Trừ 5px để tính toán padding */
-    border-color: #e84e0e;
+    /*border-color: #e84e0e;
     border-width: 1px;
     margin-right: 10px;
     outline: none;
     padding: 5px; /* Giảm padding để nút nhấn nhỏ hơn */
-    align-items: center;
+    /*align-items: center;
     vertical-align: middle;
-}
+} */
+    #jobbutton{
+    border-radius: 5px 20px 20px 5px;
+    background-color: white;
+    }
 #jobbutton:hover {
     background-color: gray;
     color: white;
@@ -525,8 +529,7 @@ h2 {
 
 #lislider {
     margin: 0 auto;
-    width: 800px;
-    max-width: 100%;
+    width: 100%;
     text-align: center;
 }
 
@@ -700,11 +703,7 @@ h2 {
     }
 }
 
-#lianimation {
-    width: 90%; /* Adjust as needed */
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-}
+
 
 #lislides {
     width: 100%;
@@ -728,20 +727,19 @@ h2 {
     margin: 2px;
     padding:2px
 }
-#LIBRARY {
-    display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    flex-wrap: wrap; /* Thêm dòng này */
+.index-container .LIBRARY {
+    display: block;
 }
 
-#lititle {
-    width: 40%;
-    margin-left: 175px;
+.lititle h2 {
+    width: 100%;
+    text-align: center;
 }
-
+.lititle h3 {
+    text-align: center;
+}
 #lianimation {
-    width: 60%;
-    margin: 20px; /* Đảm bảo cùng margin với #lititle */
+    width: 100%;
 }
 
 
@@ -769,7 +767,12 @@ footer {
     padding: 50px 50px 60px 50px;
     margin-top: 80px;
 }
-
+@media screen and (max-width:700px) {
+    
+   .index-container .LIBRARY .lititle h2 {
+        font-size: 180% ;
+    }
+}
 .footer-distributed .footer-logo, .footer-distributed .footer-center, .footer-distributed .footer-right {
     display: inline-block;
     vertical-align: top;
