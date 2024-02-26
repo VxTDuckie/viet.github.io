@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+    color: #e84e0e;
+    font-variant: small-caps;
+    font-size: 24px;
+    }
+
+.job-container{
+   position: relative;
+   margin: 20px;
+   margin-top: 150px;
+}
+
+.main-header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 10%;
+  
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .main-header::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, .1);
+   backdrop-filter: blur(50px);
+   z-index: -1;
+  }
+  
+  .main-header::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(90deg transparent, rgba(255, 255, 255, .4), transparent);
+   
+   z-index: -1;
+  }
+  
+  .main-header::hover::after{
+    left:100%;
+  }
+  
+  .header-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  
+  }
+  
+  .navbar a{
+   font-size: 1.3rem;
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 2.5rem;
+  }
+  
+  .navbar a:hover, .navbara a.active{
+    color: #aa9c9c;
+  
+  }
+  
+  .navbar a.active {
+    text-decoration: underline ; 
+    
+  }
+  
+  #checkA{
+    display: none;
+  }
+  
+  .icons-header{
+    right: 5%;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+.Responsibilities, .Requirements {
+    color: #e84e0e;
+    margin-left: 20px;
+    }
+.Essential , .Prefertable {
+    margin-left: 20px;
+}
+#DSEssential, #WDEssential {
+    color: grey; 
+    margin: auto; 
+    text-align: justify;
+    line-height: 2.0;
+    margin-left: 25px; 
+    margin-right: 25px; 
+    }
+#DSPrefertable, #WDPrefertable {
+    color: grey; 
+    margin: auto; 
+    text-align: justify;
+    line-height: 2.0;
+    margin-left: 25px; 
+    }
+#DSResponsibilities, #WDResponsibilities {
+    color: grey; 
+    margin-left: 25px; 
+    text-align: justify;
+    line-height: 2.0;
+    }
+.why {
+    margin: auto; 
+    text-align: justify;
+    line-height: 2.0;
+    margin-left: 25px; 
+    }
+.info {
+    margin-right: 20px; 
+    margin-left: 10px; 
+}
+.Reason {
+    color: grey; 
+    margin: auto; 
+    text-align: justify;
+    line-height: 2.0;
+    margin-right: 20px; 
+    margin-left: 20px; 
+    }
+#location {
+    vertical-align: middle; 
+    width: 30px; 
+    height: auto;
+    }
+.content {
+    color: grey; 
+    margin: auto; 
+    text-align: justify;
+    }
+div {
+    line-height: 2.0;
+    text-align: justify;
+    }
+.button {
+    background-color: white;
+    color: #e84e0e;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    border-color:#e84e0e;
+    border-width: 1px;
+    margin-right: 10px; 
+    outline: none;
+    padding: 20px; 
+    float: right;
+    }
+    
+.button:hover {
+    background-color: #e84e0e;
+    color: white;
+    border: none;
+    }
+    
+#share {
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    width: 25%;
+    box-sizing: border-box;
+    overflow: hidden;
+    float: right;
+    margin-right: 10px;
+    }
+.sm {
+    display: inline-block;
+    vertical-align: bottom;
+    }
+.smlogo {
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 10px;
+    width: 25px;
+    height: 20px;
+}
+#receive {
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+}
+#email  {
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+}
+#register {
+    background-color: #e84e0e;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    border-color:#e84e0e;
+    border-width: 1px;
+    margin: auto;
+    outline: none;
+    padding: 10px;
+    vertical-align: middle;
+}
+legend {
+    margin-left: 30px;
+    }
+fieldset {
+    padding: 7px;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1500px) {
+    #share {
+        width: 25%;
+        padding: 7.5px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {    
+    #share {
+        width: 60%;
+        display: inline-block;
+        margin-top: 11px;
+        padding: 10px;
+        font-size: smaller;
+    }
+    .smlogo {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+    .button {
+        margin-top: 10px;
+        float: right;
+        font-weight: bold;
+        padding: 14px;
+    }
+    #DSEnssential, #WDEssential, #DSPrefertable, #WDPrefertable {
+        margin-right: 25px;
+    }
+    #DSResponsibilities, #WDResponsibilities {
+        margin-right: 25px;
+    }
+    
+} 
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* The footer is fixed to the bottom of the page */
+
+footer {
+    position: flex;
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+}
+
+.footer-distributed {
+    background-color: lightgray;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-logo, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+.footer-icons {
+    text-align: center;
+}
+/* Footer left */
+
+.footer-distributed .footer-logo {
+    width: 30%;
+    height: auto;
+
+}
+
+#logo  {
+width: 50%;
+height: auto;
+}
+
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: black;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: black;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: gray;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: gray;
+    text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: gray;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #e84e0e;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #e84e0e;
+    color: white;
+}
+
+.footer-distributed .footer-center i {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #e84e0e;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-center i:hover {
+    background-color: #e84e0e;
+    color: white;
+}
+
+.footer-links a:hover {
+    color: #e84e0e;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-logo, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
+        
+
+.main-header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 10%;
+  
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+  
+  .main-header::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: white;
+   backdrop-filter: blur(50px);
+   z-index: -1;
+  }
+  #teamlogo {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    margin-left: 0;
+  }
+  .main-header::after{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(90deg transparent, rgba(255, 255, 255, .4), transparent);
+   
+   z-index: -1;
+  }
+  
+  .main-header::hover::after{
+    left:100%;
+  }
+  
+  .header-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e84e0e;
+    text-decoration: none;
+    vertical-align: middle; 
+  }
+  
+  .navbar a{
+   font-size: 1.3rem;
+   color: black;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 2.5rem;
+  }
+  
+  .navbar a:hover, .navbara a.active{
+    color: #e84e0e;
+  
+  }
+  
+  .navbar a.active {
+    text-decoration: underline ; 
+    
+  }
+  
+  #checkA{
+    display: none;
+  }
+  
+  .icons-header{
+    right: 5%;
+    font-size: 2.8rem;
+    color: black;
+    cursor: pointer;
+    display: none;
+  }
+  
+  
+
+  
+  /* BP */
+  @media screen and (max-width:800px) {
+    .main-header{
+    padding: 1.3rem 5%;
+  
+  }
+  }
+  
+
+  #checkA:checked~.icons-header #menu-icon{
+    display: none;
+  }
+  
+  #checkA:checked~.icons-header #close-icon{
+    display: block;
+  }
+  
+  @media screen and (max-width:800px) {
+    .icons-header{
+      display: inline-flex;
+    }
+  
+    .icons-header #close-icon{
+      display: none;
+    }
+    .header-logo {
+        display: none;
+    }
+
+    .navbar{
+      position: absolute;
+      top:100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      height: 0;
+      backdrop-filter: blur(50px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+      overflow: hidden;
+      transition: .3s ease;
+    }
+    
+    .navbar a:hover {
+        color: white;
+        background-color: orange;
+    }
+  
+    #checkA:checked~.navbar{
+      height: 18rem;
+    }
+  
+    .navbar a{
+      display: block;
+      font-size: 1.1rem;
+      opacity: 0;
+      margin: 1.5rem 0;
+      text-align: center;
+      transform: translateY(-50px);
+      transition: .3s ease;
+    }
+  }
+  
+  #checkA:checked~.navbar a{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i)) ;
+  }
+
+  @media only screen and (min-width:801px) and (max-width:1024px) {
+    .icons-header{
+      display: inline-flex;
+    }
+  
+    .icons-header #close-icon{
+      display: none;
+    }
+    .header-logo {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #teamlogo {
+        display: flex;
+        justify-content: center;
+    }
+  
+    .navbar{
+      position: absolute;
+      top:100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      height: 0;
+      backdrop-filter: blur(50px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+      overflow: hidden;
+      transition: .3s ease;
+    }
+    
+    .navbar a:hover {
+        color: white;
+        background-color: orange;
+    }
+  
+    #checkA:checked~.navbar{
+      height: 18rem;
+    }
+  
+    .navbar a{
+      display: block;
+      font-size: 1.1rem;
+      opacity: 0;
+      margin: 1.5rem 0;
+      text-align: center;
+      transform: translateY(-50px);
+      transition: .3s ease;
+    }
+  }
+  
+  #checkA:checked~.navbar a{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i)) ;
+  }
