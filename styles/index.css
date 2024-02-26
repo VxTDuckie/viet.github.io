@@ -412,14 +412,58 @@ h2 {
     margin-right: 20px;
     margin-left: 20px;
 }
-#WORKPLACE {
+.WORKPLACE {
+    padding: 20px;
     margin-bottom: 50px;
     margin-top: 50px;
     background-color: lightgrey;
     background-size: 100%;
-    overflow: hidden;
     display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
+
+.workcont h2 {
+    color: #e84e0e;
+    text-align: center;
+}
+.wf-img{
+
+    display: flex;
+    padding: 10px;
+    width: 100%; /* Ảnh sẽ tự động điều chỉnh kích thước theo .WORKPLACE /
+}
+
+.wf-img img {
+    width: 100%; / Ảnh sẽ tự động điều chỉnh kích thước theo .wf-img /
+    height: auto; / Đảm bảo tỷ lệ khung hình của ảnh /
+    align-items: center;
+}
+
+.workcont {
+    justify-content: center;
+    text-align: justify;
+    vertical-align: middle;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    flex-wrap: wrap; / Nội dung sẽ tự động chuyển sang chế độ wrap khi cần /
+}
+
+/ Khi cửa sổ có chiều rộng lớn hơn 768px /
+@media (min-width: 768px) {
+    .WORKPLACE {
+        flex-direction: row; / #cty và .workcont sẽ nằm ngang */
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    #cty {
+        width:50%
+    }
+    
+
 .workcont1 {
     color: gray;
     padding: 5px;
