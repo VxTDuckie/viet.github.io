@@ -9,11 +9,11 @@
 h2 {
     color: #e84e0e;
 }
-#index-container {
+.index-container {
     position: relative;
     margin: 20px; 
     margin-top: 200px;
-    padding: 10vh;
+    padding: 2vh;
 }
  
 .welhead {
@@ -242,7 +242,7 @@ h2 {
     padding: 10px;
     margin: 10px;
 }
-#WELFARE > div {
+.WELFARE > div {
     display: flex;
     flex-wrap: wrap;
 }
@@ -747,7 +747,8 @@ height: auto;
     top:0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 5%;
+    padding: 1.5rem 10%;
+  
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -762,21 +763,10 @@ height: auto;
    left: 0;
    width: 100%;
    height: 100%;
-   background: white;
+   background: rgba(0, 0, 0, .1);
    backdrop-filter: blur(50px);
    z-index: -1;
   }
-  
-  
-  #teamlogo{
-    display: inline-block;
-  
-    width: 150px;
-    height: 150px;
-    padding: 15px;
-   text-align: center;
-  }
-  
   
   .main-header::after{
    content: '';
@@ -795,34 +785,28 @@ height: auto;
   }
   
   .header-logo {
-    display:flex;
-    float:right;
     font-size: 2rem;
     font-weight: bold;
-    color: black;
+    color: white;
     text-decoration: none;
-    padding: 5px;
-    text-align: center;
-    color:#e84e0e
-   
   
   }
   
   .navbar a{
    font-size: 1.3rem;
-   color: black;
+   color: #fff;
    text-decoration: none;
    font-weight: 500;
    margin-left: 2.5rem;
   }
   
   .navbar a:hover, .navbara a.active{
-    color: #e84e0e;
+    color: #aa9c9c;
+  
   }
   
   .navbar a.active {
-  
-    color: #e84e0e;
+    text-decoration: underline ; 
     
   }
   
@@ -839,12 +823,10 @@ height: auto;
   }
   
   
-  
 
   
   /* BP */
-  /* ---- */
-  @media screen and (max-width:800px) {
+@media screen and (max-width:800px) {
     .main-header{
     padding: 1.3rem 5%;
   
@@ -920,4 +902,12 @@ height: auto;
     color: white;
     background-color: orange;
   }
+  }
+  
+  
+  
+  #checkA:checked~.navbar a{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i)) ;
   }
