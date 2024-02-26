@@ -747,8 +747,7 @@ height: auto;
     top:0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 10%;
-  
+    padding: 1.5rem 5%;
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -767,13 +766,18 @@ height: auto;
    backdrop-filter: blur(50px);
    z-index: -1;
   }
-  #teamlogo {
+  
+  
+  #teamlogo{
     display: inline-block;
+  
     width: 150px;
     height: 150px;
-    padding: 20px;
-    margin-left: 0;
+    padding: 15px;
+   text-align: center;
   }
+  
+  
   .main-header::after{
    content: '';
    position: absolute;
@@ -791,11 +795,17 @@ height: auto;
   }
   
   .header-logo {
-    font-size: 1.5rem;
+    display:flex;
+    float:right;
+    font-size: 2rem;
     font-weight: bold;
-    color: #e84e0e;
+    color: black;
     text-decoration: none;
-    vertical-align: middle; 
+    padding: 5px;
+    text-align: center;
+    color:#e84e0e
+   
+  
   }
   
   .navbar a{
@@ -808,11 +818,11 @@ height: auto;
   
   .navbar a:hover, .navbara a.active{
     color: #e84e0e;
-  
   }
   
   .navbar a.active {
-    text-decoration: underline ; 
+  
+    color: #e84e0e;
     
   }
   
@@ -823,15 +833,17 @@ height: auto;
   .icons-header{
     right: 5%;
     font-size: 2.8rem;
-    color: black;
+    color: #fff;
     cursor: pointer;
     display: none;
   }
   
   
+  
 
   
   /* BP */
+  /* ---- */
   @media screen and (max-width:800px) {
     .main-header{
     padding: 1.3rem 5%;
@@ -839,7 +851,6 @@ height: auto;
   }
   }
   
-
   #checkA:checked~.icons-header #menu-icon{
     display: none;
   }
@@ -851,94 +862,49 @@ height: auto;
   @media screen and (max-width:800px) {
     .icons-header{
       display: inline-flex;
+      color: black;
     }
   
     .icons-header #close-icon{
       display: none;
-    }
-    .header-logo {
-        display: none;
-    }
-
-    .navbar{
-      position: absolute;
-      top:100%;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      height: 0;
-      backdrop-filter: blur(50px);
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
-      overflow: hidden;
-      transition: .3s ease;
-    }
-    
-    .navbar a:hover {
-        color: white;
-        background-color: orange;
+      color: black;
     }
   
-    #checkA:checked~.navbar{
-      height: 18rem;
-    }
-  
-    .navbar a{
-      display: block;
-      font-size: 1.1rem;
-      opacity: 0;
-      margin: 1.5rem 0;
-      text-align: center;
-      transform: translateY(-50px);
-      transition: .3s ease;
-    }
-  }
-  
-  #checkA:checked~.navbar a{
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: calc(.15s * var(--i)) ;
-  }
-
-  @media only screen and (min-width:801px) and (max-width:1024px) {
-    .icons-header{
-      display: inline-flex;
-    }
-  
-    .icons-header #close-icon{
-      display: none;
-    }
-    .header-logo {
-        text-align: center;
-        margin: 0 auto;
-    }
     #teamlogo {
-        display: flex;
-        justify-content: center;
-    }
+      display: flex;
+      justify-content: center;
+      margin-left: -15px;
+  }
+  
+  .header-logo{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+  }
   
     .navbar{
       position: absolute;
       top:100%;
       left: 0;
       width: 100%;
-      background-color: white;
+      background-color:white;
       height: 0;
-      backdrop-filter: blur(50px);
+      background: blur(100px);
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
       overflow: hidden;
       transition: .3s ease;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
-    
-    .navbar a:hover {
-        color: white;
-        background-color: orange;
-    }
+  
+  #teamlogo{display:none;}
   
     #checkA:checked~.navbar{
       height: 18rem;
     }
   
     .navbar a{
+      
       display: block;
       font-size: 1.1rem;
       opacity: 0;
@@ -946,26 +912,12 @@ height: auto;
       text-align: center;
       transform: translateY(-50px);
       transition: .3s ease;
+      color:black;
     }
-  }
   
-  #checkA:checked~.navbar a{
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: calc(.15s * var(--i)) ;
+  
+  .navbar a:hover{
+    color: white;
+    background-color: orange;
   }
-
-  @media screen and (max-width: 1000px) {
-    #weltitle {
-        display: flex;
-        width: 100%; /* Chiều rộng đầy đủ */
-        text-align: left; /* Canh giữa nội dung */
-        margin: 0;
-    }
-
-    #animation {
-        display: flex;
-        width: 300px; /* Chiều rộng đầy đủ */
-        margin-bottom: 50px;
-    }
   }
