@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Descriptions</title>
-    <link rel="stylesheet" href="styles/jobs.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
-<body>
+<body class="job-body">
     <header class="main-header">
-        <img id="teamlogo" src="images/Newly-Webs.png" >
-        <a href="#" class="header-logo">Newly-Webs </a>
-        <input type="checkbox" id="checkA">
-        <label for="checkA" class="icons-header">
-          <i class="bx bx-menu" id="menu-icon"></i>
-          <i class="bx bx-x" id="close-icon"></i>
-        </label>
-        <nav class="navbar">
-          <a href="index.html" style="--i:0;"> HOME</a>
-          <a href="jobs.html" style="--i:3;" class="active"> JOB INFORMATION</a>
-          <a href="apply.html" style="--i:2;"> APPLY</a>
-          <a href="about.html" style="--i:1;"> ABOUT US</a>
-          <a href="#" style="--i:4;"> ENHANCEMENT</a>
-         </nav>     
-      </header>      
+   
+        <img id="teamlogo" src="images/Newly-Webs.png">
+         <a href="#" class="header-logo">Newly-Webs </a>
+    
+     
+       <input type="checkbox" id="checkA">
+       <label for="checkA" class="icons-header">
+         <img src="images/menu-regular-60.png" id="menu-icon"></i>
+         <img src="images/x-regular-60.png" id="close-icon"></i>
+       </label>
+        
+       <nav class="navbar">
+         <a href="index.html" style="--i:0;" > HOME</a>
+         <a href="about.html" style="--i:1;"> ABOUT US</a>
+         <a href="apply.html" style="--i:2;" > APPLY</a>
+         <a href="jobs.html" style="--i:3;" class="active"> JOB INFORMATION</a>
+         <a href="#" style="--i:4;"> ENHANCEMENT</a>
+        </nav>
+     </header>     
     <div class="job-container">
     <div>
         <h3>Recruitment information</h3>
@@ -146,7 +150,7 @@
             <aside>
                 <h2 class="why">Why Work With Us?</h2>
                 <p class="Reason">We offer a dynamic and innovative work environment where creativity and initiative are valued. Join our team to collaborate on exciting projects and make a meaningful impact in the world of web development.</p>
-                <button class="button"><h4>APPLY NOW</h4></button>
+                <a href="apply.html"><button class="button"><h4>APPLY NOW</h4></button></a>
             </aside>
             <aside >
                 <button class="button"><h4>INTRODUCE CANIDATES</h4></button>
@@ -159,7 +163,7 @@
             <img class="smlogo" src="images/linkin.png" alt="sm">
         </aside>
     </fieldset>
-    <aside id="receive">
+    <aside class="receive">
         <p>Receive job information</p>
         <input type="email" placeholder="Type your email address here" id="email">
         <button id="register"> Register</button>
@@ -185,17 +189,17 @@
     
         <div class="footer-center">
             <div>
-                <i class='bx bxs-map' ></i>
+                <img src="images/map-regular-36.png"></img>
                 <p>Ho Chi Minh City</p>
             </div>
     
             <div>
-                <i class='bx bxs-phone' ></i>
+                <img src="images/phone-solid-36.png"></img>
                 <p><a href="tel:+84779900990">+(84)779900990</a></p>
             </div>
             <div>
-                <i class='bx bx-envelope' ></i>
-                <p><a href="mailto:newlywebsupport@gmail.com">newlywebsupport@gmail.com</a></p>
+                <img class="bx-envelope" src="images/envelope-solid-36.png"></img>
+                <p><a href="images/Newly-webSP@gmail.com">Newly-webSP@gmail.com</a></p>
             </div>
         </div>
         <div class="footer-right">
@@ -204,11 +208,11 @@
                 <strong>Empowering Your Digital Universe: Where Innovation Meets Technological Mastery with Newly-Webs</strong>. 
             </p>
             <div class="footer-icons">
-                <a href="#"><i class='bx bxl-facebook-square'></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-github' ></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-youtube' ></i></a>
+                <a href="#"><img src="images/facebook-square-logo-36.png"></img></a>
+                <a href="#"><img src="images/instagram-logo-36.png"></img></a>
+                <a href="#"><img src="images/github-logo-36.png"></img></a>
+                <a href="#"><img src="images/twitter-logo-36.png"></img></a>
+                <a href="#"><img src="images/youtube-logo-36.png"></img></a>
             </div>
-</footer>
+    </footer>
 </html>

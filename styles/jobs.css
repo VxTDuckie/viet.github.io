@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-h1 {
+.job-container h1 {
     color: #e84e0e;
     font-variant: small-caps;
     font-size: 24px;
@@ -130,17 +130,17 @@ h1 {
     text-align: justify;
     line-height: 2.0;
     }
-.why {
+.job-body .why {
     margin: auto; 
     text-align: justify;
     line-height: 2.0;
     margin-left: 25px; 
     }
-.info {
+.job-body .info {
     margin-right: 20px; 
     margin-left: 10px; 
 }
-.Reason {
+.job-body .Reason {
     color: grey; 
     margin: auto; 
     text-align: justify;
@@ -148,21 +148,21 @@ h1 {
     margin-right: 20px; 
     margin-left: 20px; 
     }
-#location {
+.job-body #location {
     vertical-align: middle; 
     width: 30px; 
     height: auto;
     }
-.content {
+.job-body .content {
     color: grey; 
     margin: auto; 
     text-align: justify;
     }
-div {
+  .job-body div {
     line-height: 2.0;
     text-align: justify;
     }
-.button {
+.job-body .button {
     background-color: white;
     color: #e84e0e;
     text-align: center;
@@ -176,13 +176,16 @@ div {
     float: right;
     }
     
-.button:hover {
+.job-body .button:hover {
     background-color: #e84e0e;
     color: white;
     border: none;
     }
-    
-#share {
+.job-body .button, #share {
+  flex-wrap: wrap;
+}
+
+.job-body #share {
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
@@ -196,18 +199,18 @@ div {
     float: right;
     margin-right: 10px;
     }
-.sm {
+.job-body .sm {
     display: inline-block;
     vertical-align: bottom;
     }
-.smlogo {
+.job-body .smlogo {
     display: inline-block;
     vertical-align: bottom;
     margin: 10px;
     width: 25px;
     height: 20px;
 }
-#receive {
+.job-body #receive {
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
@@ -216,16 +219,15 @@ div {
     margin-top: 20px;
     align-items: center;
 }
-#email  {
+.job-body #email  {
     border-radius: 10px;
-    font-family: 'Montserrat';
     padding: 5px;
     margin-bottom: 10px;
     margin-top: 10px;
-    width: calc(100% - 22px);
+    width: 90%;
     box-sizing: border-box;
 }
-#register {
+.job-body #register {
     background-color: #e84e0e;
     color: white;
     text-align: center;
@@ -237,11 +239,17 @@ div {
     outline: none;
     padding: 10px;
     vertical-align: middle;
+    font-weight: bold;
 }
-legend {
+.job-body #register:hover{
+  background-color: #e06e3d;
+  border-color: #e06e3d;
+}
+
+.job-body legend {
     margin-left: 30px;
     }
-fieldset {
+  .job-body fieldset {
     padding: 7px;
     border-radius: 10px;
 }
@@ -250,6 +258,7 @@ fieldset {
     #share {
         width: 25%;
         padding: 7.5px;
+        
     }
 }
 
@@ -266,7 +275,7 @@ fieldset {
         width: 15px;
         height: 15px;
     }
-    .button {
+    .job-body .button {
         margin-top: 10px;
         float: right;
         font-weight: bold;
@@ -281,10 +290,6 @@ fieldset {
     
 } 
 
-* {
-    padding: 0;
-    margin: 0;
-}
 
 /* The footer is fixed to the bottom of the page */
 
@@ -598,10 +603,184 @@ height: auto;
       transform: translateY(-50px);
       transition: .3s ease;
     }
+
+    .main-header{
+      position: fixed;
+      top:0;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 5%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+    
+    .main-header::before{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: white;
+     backdrop-filter: blur(50px);
+     z-index: -1;
+    }
+    
+    
+    #teamlogo{
+      display: inline-block;
+    
+      width: 150px;
+      height: 150px;
+      padding: 15px;
+     text-align: center;
+    }
+    
+    
+    .main-header::after{
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg transparent, rgba(255, 255, 255, .4), transparent);
+     z-index: -1;
+    }
+    
+    .main-header::hover::after{
+      left:100%;
+    }
+    
+    .header-logo {
+      display:flex;
+      float:right;
+      font-size: 2rem;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+      padding: 5px;
+      text-align: center;
+      color:#e84e0e
+     
+    
+    }
+    
+    .navbar a{
+     font-size: 1.3rem;
+     color: black;
+     text-decoration: none;
+     font-weight: 500;
+     margin-left: 2.5rem;
+    }
+    
+    .navbar a:hover, .navbara a.active{
+      color: #e84e0e;
+    }
+    
+    .navbar a.active {
+    
+      color: #e84e0e;
+      
+    }
+    
+    #checkA{
+      display: none;
+    }
+    
+    .icons-header{
+      right: 5%;
+      font-size: 2.8rem;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+    
+    @media screen and (max-width:800px) {
+      .main-header{
+      padding: 1.3rem 5%;
+    }
+    }
+    
+    #checkA:checked~.icons-header #menu-icon{
+      display: none;
+    }
+    
+    #checkA:checked~.icons-header #close-icon{
+      display: block;
+    }
+    
+    @media screen and (max-width:800px) {
+      .icons-header{
+        display: inline-flex;
+        color: black;
+      }
+    
+      .icons-header #close-icon{
+        display: none;
+        color: black;
+      }
+    
+      #teamlogo {
+        display: flex;
+        justify-content: center;
+        margin-left: -15px;
+    }
+    
+    .header-logo{
+      display: flex;
+      justify-content: center;
+      margin-left: 15px;
+    }
+    
+      .navbar{
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        background-color:white;
+        height: 0;
+        background: blur(100px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+        overflow: hidden;
+        transition: .3s ease;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    
+    #teamlogo{
+        display:none;
+        }
+    
+      #checkA:checked~.navbar{
+        height: 18rem;
+      }
+    
+      .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        opacity: 0;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        transition: .3s ease;
+        color:black;
+      }
+    
+    
+     .navbar a:hover{
+      color: white;
+      background-color: orange;
+    }
+    #checkA:checked~.navbar a{
+      transform: translateY(0);
+      opacity: 1;
+      transition-delay: calc(.15s * var(--i)) ;
+    }
+    }
   }
   
-  #checkA:checked~.navbar a{
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: calc(.15s * var(--i)) ;
-  }
+ 
